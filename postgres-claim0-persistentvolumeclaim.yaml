@@ -2,7 +2,7 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: postgresql-pv
-  namespace: n8n-hyperspect
+  namespace: n8n
 spec:
   storageClassName: gp2
   accessModes:
