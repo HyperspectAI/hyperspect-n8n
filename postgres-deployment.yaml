@@ -4,7 +4,7 @@ metadata:
   labels:
     service: postgres-n8n
   name: postgres
-  namespace: n8n
+  namespace: n8n-hyperspect
 spec:
   replicas: 1
   selector:
@@ -37,7 +37,7 @@ spec:
               mountPath: /var/lib/postgresql/data
           env:
             - name: PGDATA
-              value: /var/lib/postgresql/data/pgdata      
+              value: /var/lib/postgresql/data/pgdata
             - name: POSTGRES_USER
               valueFrom:
                 secretKeyRef:
@@ -60,10 +60,10 @@ spec:
                 secretKeyRef:
                   name: postgres-secret
                   key: POSTGRES_NON_ROOT_PASSWORD
-            - name:   POSTGRES_HOST
+            - name: POSTGRES_HOST
               value: postgres-service
             - name: POSTGRES_PORT
-              value: '5432'
+              value: "5432"
       restartPolicy: Always
       volumes:
         - name: postgresql-pv

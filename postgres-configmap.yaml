@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: init-data
-  namespace: n8n
+  namespace: n8n-hyperspect
 data:
   init-data.sh: |
     #!/bin/bash
