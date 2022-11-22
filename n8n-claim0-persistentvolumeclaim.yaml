@@ -1,5 +1,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
+volumes:
+  - name: n8n-claim0
+    persistentVolumeClaim:
+      claimName: n8n-claim0
 metadata:
   labels:
     service: n8n-claim0
